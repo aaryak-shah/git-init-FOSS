@@ -1,5 +1,8 @@
 <script>
   import { onMount } from 'svelte'
+  import { FaChevronUp } from 'svelte-icons/fa'
+  import Menu from 'svelte-icons/fa/FaBars.svelte'
+  import Close from 'svelte-icons/fa/FaChevronUp.svelte'
 
   export let tab = 0
   let openMenu = false
@@ -34,8 +37,14 @@
     </div>
     <div class="right">
       <a href="https://github.com/AASF-IIITM">GitHub</a>
-      <h1 class="green" class:hide={openMenu} on:click={toggleMenu}>+</h1>
-      <h1 class="green" class:hide={!openMenu} on:click={toggleMenu}>-</h1>
+      <div class="icon" class:hide={openMenu} on:click={toggleMenu}>
+        <Menu />
+      </div>
+      <div class="icon" class:hide={!openMenu} on:click={toggleMenu}>
+        <FaChevronUp />
+      </div>
+      <!-- <h1 class="green" class:hide={openMenu} on:click={toggleMenu}>+</h1>
+      <h1 class="green" class:hide={!openMenu} on:click={toggleMenu}>-</h1> -->
     </div>
   </div>
   <div class="mob-tabs" class:hide={!openMenu}>
@@ -112,6 +121,12 @@
     display: none;
   }
 
+  .icon {
+    height: 20px;
+    width: 20px;
+    color: #00ff00;
+    cursor: pointer;
+  }
   @media only screen and (min-width: 768px) {
     .navbar {
       padding: 20px 15%;
@@ -132,6 +147,9 @@
       display: inline;
     }
     .right h1 {
+      display: none;
+    }
+    .icon {
       display: none;
     }
   }
