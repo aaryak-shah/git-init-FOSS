@@ -1,4 +1,5 @@
 <script>
+  import { avatars } from '../stores/avatars'
   import Github from 'svelte-icons/fa/FaGithub.svelte'
   export let p
 
@@ -12,7 +13,7 @@
     </div>
     <div class="repo">
       <div class="icon"><Github /></div>
-      <a href={p.repo}> {l2r(p.repo)}</a>
+      <a href={p.repo} target="_blank"> {l2r(p.repo)}</a>
     </div>
     <div class="stack">
       {#each p.stack as s}
@@ -22,16 +23,22 @@
     <p class="desc">
       {p.desc}
     </p>
+    {#if p.pre}
+      <b>Prerequisites: </b>
+      {p.pre}
+    {/if}
   </div>
   <div class="mentor">
-    <!-- <div class="avatar">
-      <img src="https://avatars.githubusercontent.com/u/56076061?v=4" alt="" />
-    </div> -->
+    <div class="avatar">
+      {#each p.maintainers as m, i}
+        <img src={avatars[m]} class="t-{i}" alt="" />
+      {/each}
+    </div>
     <div class="text">
       <h3>Project Maintainers</h3>
       <div class="maintainers">
         {#each p.maintainers as m, i}
-          <a href="https://github.com/{m}" class="uname">{m}</a
+          <a href="https://github.com/{m}" class="uname" target="_blank">{m}</a
           >{#if i < p.maintainers.length - 1}
             <span class="comma">,</span>
           {/if}
@@ -48,6 +55,7 @@
     padding: 20px;
     /* width: 300px; */
     /* height: 400px; */
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,15 +90,35 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
+  .avatar {
+    display: flex;
+    margin: 10px 0;
+  }
+
   img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 50px;
+    border: 4px solid white;
+    background-color: white;
+  }
+
+  .t-1 {
+    transform: translateX(-20px);
+  }
+  .t-2 {
+    transform: translateX(-40px);
+  }
+  .t-3 {
+    transform: translateX(-60px);
+  }
+  .t-4 {
+    transform: translateX(-80px);
   }
 
   .mentor {
-    display: flex;
-    gap: 1rem;
+    /* display: flex; */
+    gap: 10px;
     margin: 20px 0;
   }
 
@@ -105,9 +133,9 @@
   }
 
   .icon {
+    color: white;
     height: 20px;
     width: 20px;
-    color: white;
     display: inline-block;
   }
 </style>

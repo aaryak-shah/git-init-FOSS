@@ -2,6 +2,7 @@
   import Search from 'svelte-icons/fa/FaSearch.svelte'
   import LeaderboardTile from './LeaderboardTile.svelte'
   import { rankify, search, searchQueryStore } from '../stores/leaderboard'
+  import { onMount } from 'svelte'
 
   let query = ''
   let results = []
@@ -10,22 +11,36 @@
     searchQueryStore.set(query)
   }
 
+  onMount(() => {
+    fetch('http://localhost:3000/getData').then((res) => {
+      console.log(res)
+    })
+  })
+
   rankify()
   searchQueryStore.subscribe((data) => (results = search()))
 
   // let n = [...Array(25).keys()]
 </script>
 
-<main>
-  <div class="search">
-    <div class="icon"><Search /></div>
-    <input type="text" placeholder="Search..." bind:value={query} />
-  </div>
-  {#each results as r, i}
-    <LeaderboardTile {i} {r} />
-    <div class="divider" />
-  {/each}
-</main>
+{#if false}
+  <main>
+    <div class="search">
+      <div class="icon"><Search /></div>
+      <input type="text" placeholder="Search..." bind:value={query} />
+    </div>
+    {#each results as r, i}
+      <LeaderboardTile {i} {r} />
+      <div class="divider" />
+    {/each}
+  </main>
+{:else}
+  <main>
+    <center>
+      <h1>- Coming Soon -</h1>
+    </center>
+  </main>
+{/if}
 
 <style>
   main {

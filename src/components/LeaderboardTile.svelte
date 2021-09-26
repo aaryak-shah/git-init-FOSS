@@ -16,7 +16,7 @@
       <h3>{r.name}</h3>
       <div class="subtitle">
         <div class="icon"><Github /></div>
-        <a href={r.profile}>{l2p(r.profile)}</a>
+        <a href={r.profile} target="_blank">{l2p(r.profile)}</a>
         <div class="muted">&bull;</div>
         <div class="muted">{r.rollno}</div>
       </div>
