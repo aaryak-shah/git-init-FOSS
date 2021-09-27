@@ -35,7 +35,7 @@ export let projects = [
   },
   {
     title: 'Dynamic Gnome Wallpapers',
-    repo: 'https://github.com/john-doe/Kyagoro',
+    repo: 'https://github.com/manishprivet/dynamic-gnome-wallpapers',
     stack: ['Bash', 'Documentation'],
     desc: 'A collection of awesome dynamic wallpapers for Gnome, and easy scripts to install them',
     pre: 'Linux/Gnome OS',

@@ -8,19 +8,33 @@
 <main>
   <div class="date">AASF/2021</div>
   <div class="socials">
-    <a href="https://instagram.com/aasf_iiitmg" target="_blank" class="icon"
-      ><Instagram /></a
-    >
-    <a href="https://www.facebook.com/aasfiiitm/" target="_blank" class="icon"
-      ><Facebook /></a
+    <a
+      rel="noopener"
+      aria-label="Instagram"
+      href="https://instagram.com/aasf_iiitmg"
+      target="_blank"
+      class="icon"><Instagram /></a
     >
     <a
+      rel="noopener"
+      aria-label="Facebook"
+      href="https://www.facebook.com/aasfiiitm/"
+      target="_blank"
+      class="icon"><Facebook /></a
+    >
+    <a
+      rel="noopener"
+      aria-label="LinkedIn"
       href="https://www.linkedin.com/company/aasf-iiitmg"
       target="_blank"
       class="icon"><LinkedIn /></a
     >
-    <a href="https://medium.com/tech-iiitg" target="_blank" class="icon"
-      ><Medium /></a
+    <a
+      rel="noopener"
+      aria-label="Medium"
+      href="https://medium.com/tech-iiitg"
+      target="_blank"
+      class="icon"><Medium /></a
     >
   </div>
 </main>

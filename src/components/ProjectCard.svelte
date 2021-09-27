@@ -13,7 +13,7 @@
     </div>
     <div class="repo">
       <div class="icon"><Github /></div>
-      <a href={p.repo} target="_blank"> {l2r(p.repo)}</a>
+      <a rel="noopener" href={p.repo} target="_blank"> {l2r(p.repo)}</a>
     </div>
     <div class="stack">
       {#each p.stack as s}
@@ -38,7 +38,11 @@
       <h3>Project Maintainers</h3>
       <div class="maintainers">
         {#each p.maintainers as m, i}
-          <a href="https://github.com/{m}" class="uname" target="_blank">{m}</a
+          <a
+            rel="noopener"
+            href="https://github.com/{m}"
+            class="uname"
+            target="_blank">{m}</a
           >{#if i < p.maintainers.length - 1}
             <span class="comma">,</span>
           {/if}

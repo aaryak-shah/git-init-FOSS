@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="right">
-      <a href="https://github.com/AASF-IIITM">GitHub</a>
+      <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
       <div class="icon" class:hide={openMenu} on:click={toggleMenu}>
         <Menu />
       </div>

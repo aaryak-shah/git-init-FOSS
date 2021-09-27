@@ -12,7 +12,7 @@
   }
 
   onMount(() => {
-    fetch('http://localhost:3000/getData').then((res) => {
+    fetch('http://gitinitapi.jainkunal.me/leaderboard').then((res) => {
       console.log(res)
     })
   })
