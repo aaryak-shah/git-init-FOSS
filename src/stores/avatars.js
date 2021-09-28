@@ -6,4 +6,12 @@ export let avatars = {
   manishprivet: 'https://avatars.githubusercontent.com/u/54291836?v=4',
   Namanl2001: 'https://avatars.githubusercontent.com/u/56021229?v=4',
   manikmmalhotra: 'https://avatars.githubusercontent.com/u/63007399?v=4',
+  kunaljain0212: 'https://avatars.githubusercontent.com/u/56078934?v=4',
+  'aaryak-shah': 'https://avatars.githubusercontent.com/u/56076061?v=4',
+  nafees87n: 'https://avatars.githubusercontent.com/u/56021937?v=4',
+  rujvinagpure: 'https://avatars.githubusercontent.com/u/59640429?v=4',
+  TheNinza: 'https://avatars.githubusercontent.com/u/62726436?v=4',
+  sahilahmed0707: 'https://avatars.githubusercontent.com/u/56019538?v=4',
+  harshitsingh85420: 'https://avatars.githubusercontent.com/u/56180633?v=4',
+  nishidhaSri: 'https://avatars.githubusercontent.com/u/44313138?v=4',
 }

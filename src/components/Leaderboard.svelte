@@ -12,9 +12,9 @@
   }
 
   onMount(() => {
-    fetch('http://gitinitapi.jainkunal.me/leaderboard').then((res) => {
-      console.log(res)
-    })
+    // fetch('http://localhost:3000/').then((res) => {
+    //   console.log(res)
+    // })
   })
 
   rankify()

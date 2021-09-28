@@ -126,6 +126,10 @@
     margin: 20px 0;
   }
 
+  .maintainers a {
+    display: inline-block;
+  }
+
   .comma {
     margin-right: 10px;
   }
