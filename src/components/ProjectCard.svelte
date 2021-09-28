@@ -59,7 +59,6 @@
     padding: 20px;
     /* width: 300px; */
     /* height: 400px; */
-    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,7 +89,8 @@
   }
 
   .desc {
-    /* margin: 10px 0; */
+    /* margin-right: 10px; */
+    word-wrap: break-word;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
