@@ -4,7 +4,10 @@
   export let i = 0
   export let r
 
-  const l2p = (l) => l.split('/').at(-1)
+  const l2p = (l) => {
+    let components = l.split('/')
+    return components[components.length - 1]
+  }
 </script>
 
 <div class="tile" class:top={r.rank === 1}>

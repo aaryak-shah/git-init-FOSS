@@ -3,7 +3,10 @@
   import Github from 'svelte-icons/fa/FaGithub.svelte'
   export let p
 
-  const l2r = (l) => l.split('/').at(-1)
+  const l2r = (l) => {
+    let components = l.split('/')
+    return components[components.length - 1]
+  }
 </script>
 
 <div class="card">
