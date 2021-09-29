@@ -154,6 +154,46 @@ export let projects = [
     pre: '',
     maintainers: ['hitenSharm'],
   },
+  {
+    title: 'Gsearch',
+    repo: 'https://github.com/nishidhaSri/gsearch',
+    stack: ['JavaScript', 'HTML', 'CSS', 'React'],
+    desc: 'A space where you can save your favorite GitHub profiles and browse through them.',
+    pre: '',
+    maintainers: ['nishidhaSri'],
+  },
+  {
+    title: 'PathFinder Visualiser',
+    repo: 'https://github.com/secrashi/Pathfinder-Visualiser',
+    stack: ['JavaScript', 'HTML', 'CSS', 'React'],
+    desc: 'A tool for visualizing various pathfinding algorithms.',
+    pre: 'Knowledge of shortest path finding algorithms',
+    maintainers: ['secrashi'],
+  },
+  {
+    title: 'Movie Listing Webapp',
+    repo: 'https://github.com/Swarnim01/Movie_Listing_Webapp',
+    stack: [
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+    ],
+    desc: 'It is a Movie listing webapp which shows trending movies on the home screen (using MovieDB API). It has a feature of adding/removing favourite movies for the registered user (also has login/signup feature).',
+    pre: 'Should be famaliar with MERN stack.',
+    maintainers: ['Swarnim01'],
+  },
+  {
+    title: 'Connect Intellect',
+    repo: 'https://github.com/secrashi/Connect-Intellect',
+    stack: ['JavaScript', 'HTML', 'CSS', 'React', 'Node.js'],
+    desc: 'A chat application to Connect the Intellectual minds who use this application to develop this application. In simpler words, in this project we will be developing a chat application with most useful and relevant features from other most used chat applications such as discord, slack etc, and while in development mode, we will use it as a medium of communication to not only get a tested software but also an enriched user experience of the web app.',
+    pre: '',
+    maintainers: ['secrashi'],
+  },
 ]
 
 export const pstringify = () => {
