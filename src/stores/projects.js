@@ -194,6 +194,14 @@ export let projects = [
     pre: '',
     maintainers: ['secrashi'],
   },
+  {
+    title: 'AASF Website Backend',
+    repo: 'https://github.com/AASF-IIITM/aasf-website-backend',
+    stack: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB'],
+    desc: 'This server handles the backend operations of AASF, facilitating event management, user operations, attendance marking, uploading of points for event winners and goodie questions winners.',
+    pre: 'Javascript, Node.js, MongoDB',
+    maintainers: ['GunaShekar02'],
+  },
 ]
 
 export const pstringify = () => {
