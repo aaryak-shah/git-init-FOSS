@@ -17,4 +17,5 @@ export let avatars = {
   hitenSharm: 'https://avatars.githubusercontent.com/u/56029311?v=4',
   secrashi: 'https://avatars.githubusercontent.com/u/56053777?v=4',
   Swarnim01: 'https://avatars.githubusercontent.com/u/56025388?v=4',
+  GunaShekar02: 'https://avatars.githubusercontent.com/u/43517435?v=4',
 }
