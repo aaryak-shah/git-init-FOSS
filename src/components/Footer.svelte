@@ -53,7 +53,7 @@
     gap: 1rem;
   }
 
-  .icon {
+  .icon{
     height: 40px;
     width: 40px;
     color: white;
