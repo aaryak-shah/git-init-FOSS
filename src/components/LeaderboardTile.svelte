@@ -19,9 +19,11 @@
       <h3>{r.name}</h3>
       <div class="subtitle">
         <div class="icon"><Github /></div>
-        <a rel="noopener" href={r.profile} target="_blank">{l2p(r.profile)}</a>
+        <a rel="noopener" href="https://github.com/{r.profile}" target="_blank"
+          >{l2p(r.profile)}</a
+        >
         <div class="muted">&bull;</div>
-        <div class="muted">{r.rollno}</div>
+        <div class="muted">{r.rollNumber}</div>
       </div>
     </div>
   </div>

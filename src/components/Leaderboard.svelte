@@ -1,29 +1,52 @@
 <script>
   import Search from 'svelte-icons/fa/FaSearch.svelte'
   import LeaderboardTile from './LeaderboardTile.svelte'
-  import { rankify, search, searchQueryStore } from '../stores/leaderboard'
+  import {
+    leaderboard,
+    rankify,
+    search,
+    searchQueryStore,
+  } from '../stores/leaderboard'
   import { onMount } from 'svelte'
 
   let query = ''
   let results = []
+  let showLeaderboard = true
 
   $: {
     searchQueryStore.set(query)
   }
 
   onMount(() => {
-    // fetch('http://localhost:3000/').then((res) => {
-    //   console.log(res)
-    // })
+    fetch('https://gitinitapi.jainkunal.me/leaderboard')
+      .then((res) => {
+        res
+          .json()
+          .then((data) => {
+            showLeaderboard = true
+            let lb = []
+            for (let key in data) {
+              data[key].profile = key
+              lb.push(data[key])
+            }
+            leaderboard.set(lb)
+            rankify()
+            searchQueryStore.subscribe((data) => (results = search()))
+            console.log(results)
+          })
+          .catch((e) => {
+            showLeaderboard = false
+            console.error(e)
+          })
+      })
+      .catch((e) => {
+        showLeaderboard = false
+        console.error(e)
+      })
   })
-
-  rankify()
-  searchQueryStore.subscribe((data) => (results = search()))
-
-  // let n = [...Array(25).keys()]
 </script>
 
-{#if false}
+{#if showLeaderboard}
   <main>
     <div class="search">
       <div class="icon"><Search /></div>
@@ -37,7 +60,7 @@
 {:else}
   <main>
     <center>
-      <h1>- Coming Soon -</h1>
+      <h2>Leaderboard is currently not available. Please try again later</h2>
     </center>
   </main>
 {/if}

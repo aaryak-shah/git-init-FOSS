@@ -212,26 +212,7 @@ export const pstringify = () => {
   })
 }
 
-// export const courseSearchItems = () => {
-//   let items
-//   availableCourses.subscribe((courses) => {
-//     items = courses.map((c) => {
-//       let cstr: string = ''
-//       cstr += c.title + ' ' + c.description + ' '
-//       c.syllabus.forEach((t) => {
-//         cstr += t.title + ' '
-//         t.subTopics.forEach((st) => {
-//           cstr += st + ' '
-//         })
-//       })
-//       return { cstr, course: c }
-//     })
-//   })
-//   return items
-// }
-
 export const searchQueryStore = writable('')
-// const coursesStore: Writable<Array<Course>> = writable(availableCourses)
 
 export const search = () => {
   let q = ''
