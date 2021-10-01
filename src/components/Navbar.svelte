@@ -58,6 +58,7 @@
 </div>
 
 <style>
+  *{color:white;}
   .nav-box {
     position: fixed;
     top: 0;

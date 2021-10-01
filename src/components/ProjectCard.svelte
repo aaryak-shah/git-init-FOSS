@@ -56,6 +56,9 @@
 </div>
 
 <style>
+  *{
+    color: white;
+  }
   .card {
     border: 1px solid white;
     border-radius: 5px;
