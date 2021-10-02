@@ -122,6 +122,20 @@
     display: none;
   }
 
+  a{
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 9px 18px;
+    border-radius: 4px;
+    transition: all 0.5s ease-in;
+  }
+
+  a:hover{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: bold;
+  }
+
   .icon {
     height: 20px;
     width: 20px;
