@@ -18,7 +18,7 @@
     <div class="profile">
       <h3>{r.name}</h3>
       <div class="subtitle">
-        <div class="icon"><Github /></div>
+        <img src={`https://avatars.githubusercontent.com/${r.profile}`} class="icon"  alt={r.profile} />
         <a rel="noopener" href="https://github.com/{r.profile}" target="_blank"
           >{l2p(r.profile)}</a
         >
