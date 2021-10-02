@@ -32,7 +32,7 @@
   <div class="mentor">
     <div class="avatar">
       {#each p.maintainers as m, i}
-        <img src={`https://avatars.githubusercontent.com/${m}`} class="t-{i}" alt="" />
+        <img src={`https://avatars.githubusercontent.com/${m}`} class="t-{i}" alt={m} />
       {/each}
     </div>
     <div class="text">
