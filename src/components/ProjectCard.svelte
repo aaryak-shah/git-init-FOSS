@@ -1,8 +1,6 @@
 <script>
-  import { avatars } from '../stores/avatars'
   import Github from 'svelte-icons/fa/FaGithub.svelte'
   export let p
-
   const l2r = (l) => {
     let components = l.split('/')
     return components[components.length - 1]
@@ -34,7 +32,7 @@
   <div class="mentor">
     <div class="avatar">
       {#each p.maintainers as m, i}
-        <img src={avatars[m]} class="t-{i}" alt="" />
+        <img src={`https://avatars.githubusercontent.com/${m}`} class="t-{i}" alt={m} />
       {/each}
     </div>
     <div class="text">
