@@ -64,6 +64,7 @@
   a {
     font-size: small;
     display: inline-block;
+    color: white;
   }
 
   .top h2,
