@@ -1,4 +1,5 @@
 <script>
+ 
   import Search from 'svelte-icons/fa/FaSearch.svelte'
   import LeaderboardTile from './LeaderboardTile.svelte'
   import {

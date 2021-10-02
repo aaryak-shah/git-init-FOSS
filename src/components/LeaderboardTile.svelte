@@ -1,6 +1,6 @@
 <script>
   import Github from 'svelte-icons/fa/FaGithub.svelte'
-
+  import { avatars } from '../stores/avatars'
   export let i = 0
   export let r
 
@@ -18,7 +18,7 @@
     <div class="profile">
       <h3>{r.name}</h3>
       <div class="subtitle">
-        <div class="icon"><Github /></div>
+        <img src={`https://avatars.githubusercontent.com/${r.profile}`} class="avatar"  alt={r.profile} />
         <a rel="noopener" href="https://github.com/{r.profile}" target="_blank"
           >{l2p(r.profile)}</a
         >
@@ -40,7 +40,14 @@
     margin: 20px 0;
     gap: 20px;
   }
-
+  img {
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    border: 3px solid white;
+    background-color: white;
+    display: inline-block;
+  }
   .left {
     display: flex;
     align-items: center;
@@ -82,13 +89,6 @@
     text-align: right;
   }
 
-  .icon {
-    height: 15px;
-    width: 15px;
-    color: white;
-    display: inline-block;
-  }
-
   @media only screen and (min-width: 768px) {
     .rank {
       width: 50px;
@@ -103,9 +103,6 @@
     .muted {
       font-size: medium;
     }
-    .icon {
-      height: 20px;
-      width: 20px;
-    }
+    
   }
 </style>
