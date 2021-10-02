@@ -90,9 +90,17 @@
     align-items: center;
   }
 
+  .tab{
+    transition: all 0.2s ease-out;
+  }
+
   .tab:hover {
     cursor: pointer;
-    font-weight: bold;
+    background-color:white;
+    color: rgba(0, 0, 0, 0.95);
+    padding: 6px 8px;
+    border: 2px solid white;
+    border-radius: 3px;
   }
 
   .logo {
@@ -105,8 +113,9 @@
   }
 
   .current {
-    background-color: white;
-    color: black;
+    padding: 6px 8px;
+    border: 2px solid white;
+    border-radius: 3px;
   }
 
   .green {
@@ -120,6 +129,20 @@
 
   .right a {
     display: none;
+  }
+
+  a{
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 9px 18px;
+    border-radius: 4px;
+    transition: all 0.5s ease-in;
+  }
+
+  a:hover{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: bold;
   }
 
   .icon {
