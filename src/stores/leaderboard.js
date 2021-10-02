@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { writable } from "svelte/store";
 
 // export let initleaderboard = [
 //   {
@@ -123,49 +123,56 @@ import { writable } from 'svelte/store'
 //   },
 // ]
 
-export let leaderboard = writable([])
+export let leaderboard = writable([]);
 
 const titleCase = (str) => {
-  str = str.toLowerCase().split(' ')
+  str = str.toLowerCase().split(" ");
   for (var i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1)
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
   }
-  return str.join(' ')
-}
+  return str.join(" ");
+};
 
 export const rankify = () => {
   leaderboard.subscribe((lb) => {
     lb.forEach((p, i) => {
-      p.name = titleCase(p.name)
-    })
-    lb.sort((a, b) => (b.name > a.name ? -1 : 1))
-    lb.sort((a, b) => b.score - a.score)
+      p.name = titleCase(p.name);
+    });
+    lb.sort((a, b) => (b.name > a.name ? -1 : 1));
+    lb.sort((a, b) => b.score - a.score);
     lb.forEach((p, i) => {
-      p.rank = i + 1
-    })
-  })
-}
+      p.rank = i + 1;
+    });
+  });
+};
 
-export const searchQueryStore = writable('')
+export const searchQueryStore = writable("");
 
+export const pstringify = () => {
+  leaderboard.subscribe((lb) => {
+    lb.forEach((p) => {
+      p.str = p.name + " " + p.profile + " ";
+    });
+  });
+};
 export const search = () => {
-  let q = ''
-  searchQueryStore.subscribe((data) => (q = data.toLowerCase()))
-  let keywords = q.split(' ')
-  let results = []
-  let resultSet = new Set()
+  let q = "";
+  searchQueryStore.subscribe((data) => (q = data.toLowerCase()));
+  let keywords = q.split(" ");
+  let results = [];
+  let resultSet = new Set();
   leaderboard.subscribe((lb) => {
     keywords.forEach((keyword) => {
-      if (q == '' || keyword !== '') {
+      if (q == "" || keyword !== "") {
         results = results.concat(
-          lb.filter((p) => p.name.toLowerCase().includes(keyword))
-        )
+          lb.filter((p) => p.str.toLowerCase().includes(keyword))
+        );
       }
-    })
+    });
 
     results.forEach((r) => {
-      resultSet.add(r)
-    })
-  })
-  return Array.from(resultSet)
-}
+      resultSet.add(r);
+    });
+  });
+  return Array.from(resultSet);
+};

@@ -4,6 +4,7 @@
   import LeaderboardTile from './LeaderboardTile.svelte'
   import {
     leaderboard,
+    pstringify,
     rankify,
     search,
     searchQueryStore,
@@ -32,6 +33,7 @@
             }
             leaderboard.set(lb)
             rankify()
+            pstringify()
             searchQueryStore.subscribe((data) => (results = search()))
             console.log(results)
           })
