@@ -93,6 +93,10 @@
   .tab:hover {
     cursor: pointer;
     font-weight: bold;
+    background-color:transparent;
+    color: white;
+    text-decoration: underline;
+    transition: all 0.2s ease;
   }
 
   .logo {
@@ -107,6 +111,8 @@
   .current {
     background-color: white;
     color: black;
+    padding: 4px 6px;
+    border-radius: 3px;
   }
 
   .green {
