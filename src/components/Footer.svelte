@@ -57,10 +57,12 @@
     height: 40px;
     width: 40px;
     color: white;
+    transition: color 0.7s ease-out, transform 0.7s ease-in-out;
   }
 
   .icon:hover {
     cursor: pointer;
     color: #00ff00;
+    transform: rotate(360deg) scale(1.5);
   }
 </style>
