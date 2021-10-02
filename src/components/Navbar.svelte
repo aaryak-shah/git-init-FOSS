@@ -90,13 +90,17 @@
     align-items: center;
   }
 
+  .tab{
+    transition: all 0.2s ease-out;
+  }
+
   .tab:hover {
     cursor: pointer;
-    font-weight: bold;
-    background-color:transparent;
-    color: white;
-    text-decoration: underline;
-    transition: all 0.2s ease;
+    background-color:white;
+    color: rgba(0, 0, 0, 0.95);
+    padding: 6px 8px;
+    border: 2px solid white;
+    border-radius: 3px;
   }
 
   .logo {
@@ -109,9 +113,8 @@
   }
 
   .current {
-    background-color: white;
-    color: black;
-    padding: 4px 6px;
+    padding: 6px 8px;
+    border: 2px solid white;
     border-radius: 3px;
   }
 
