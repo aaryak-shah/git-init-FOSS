@@ -1,6 +1,6 @@
 <script>
   import Github from 'svelte-icons/fa/FaGithub.svelte'
-  import { avatars } from '../stores/avatars'
+  
   export let i = 0
   export let r
 
@@ -19,9 +19,7 @@
       <h3>{r.name}</h3>
       <div class="subtitle">
         <img src={`https://avatars.githubusercontent.com/${r.profile}`} class="avatar"  alt={r.profile} />
-        <a rel="noopener" href="https://github.com/{r.profile}" target="_blank"
-          >{l2p(r.profile)}</a
-        >
+        <a rel="noopener" href="https://github.com/{r.profile}" target="_blank">{l2p(r.profile)}</a>
         <div class="muted">&bull;</div>
         <div class="muted">{r.rollNumber}</div>
       </div>
