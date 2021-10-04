@@ -6,21 +6,25 @@
 
 </div>
 
-![Screenshot](https://user-images.githubusercontent.com/84467090/135757410-86a3cefc-69bd-4fca-a883-5d33b79699c1.jpg)
+![Screenshot](https://user-images.githubusercontent.com/84467090/135828886-1c6740f3-861e-42fc-9d64-442c6514452a.jpeg)
+<img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/135836526-31442296-07c1-4fcd-bd00-5c4c7b009bc2.jpeg><img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/135836654-34fbeb4b-fc0e-4c72-b858-d99e274589cc.jpeg>
 
 <div align ="center">
 
 # Features
 
 </div>
-1. Navigation
+
+### 1. Navigation
 
 - Projects - A page where all projects of mentors is listed
 - LeaderBoard - A page where Ranking of all contributors is listed
 
-2. Search Bar- Here we can directly search for project or user using by Contributers Name,Maintainers Name,UserName,Project name etc.
+### 2. Search Bar
 
-3. Projects Card
+- Here we can directly search for project or user using by Contributers Name,Maintainers Name,UserName,Project name etc.
+
+### 3. Projects Card
 
 - In this all the information about the project is given
 
@@ -30,7 +34,7 @@
   - Project Discription
   - Project Maintainers Pofile Link
 
-4. LeaderBoard Tile
+### 4. LeaderBoard Tile
 
 - Here all the information of contributors is given
 
@@ -40,16 +44,6 @@
   - Score
 
  <div align= center>
-
-# ScreenShot
-
-</div>
-
-![Screenshot](https://user-images.githubusercontent.com/84467090/135757442-2a677f91-8d1f-4f18-b52b-c78020c29329.jpg)
-
-![Screenshot](https://user-images.githubusercontent.com/84467090/135757616-f39f48dd-00e1-46c0-a2e4-7a64387e5cac.jpg)
-
-<div align ="center">
 
 # Tech Stack
 
@@ -67,27 +61,6 @@
 # Local setup
 
 </div>
-
-_Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing._
-
-_Looking for a shareable component template instead? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)_
-
----
-
-# svelte app
-
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
-
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
-
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
-
-_Note that you will need to have [Node.js](https://nodejs.org) installed._
-<br/>
-<br/>
 
 ## Get started
 
@@ -177,8 +150,8 @@ surge public my-project.surge.sh
 <table>
 	<tr>
 		<td>
-			<a href="https://github.com/ADRE9/bunk-manager-mern/graphs/contributors">
-  <img src="https://user-images.githubusercontent.com/84467090/135792345-4fa457a9-fa9b-43f2-a264-1dd8b12e2293.jpg" />
+			<a href="https://github.com/aaryak-shah/git-init-FOSS/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=aaryak-shah/git-init-FOSS" />
 </a>
 		</td>
 	</tr>
@@ -193,9 +166,9 @@ surge public my-project.surge.sh
 <br />
 <div align ="center">
 
-<a href="https://instagram.com/aasf_iiitmg"><img src="https://img.icons8.com/color/50/000000/instagram-new--v1.png"/></a>
-<a href="https://www.facebook.com/aasfiiitm/"><img src="https://img.icons8.com/external-justicon-flat-justicon/44/000000/external-facebook-social-media-justicon-flat-justicon.png"/></a>
-<a href="https://www.linkedin.com/company/aasf-iiitmg"><img src="https://img.icons8.com/external-justicon-flat-justicon/43/000000/external-linkedin-social-media-justicon-flat-justicon.png"/></a>
+<a href="https://instagram.com/aasf_iiitmg"><img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png"/></a>
+<a href="https://www.facebook.com/aasfiiitm/"><img src="https://img.icons8.com/material/50/000000/facebook--v1.png"/></a>
+<a href="https://www.linkedin.com/company/aasf-iiitmg"><img src="https://img.icons8.com/material/50/000000/linkedin--v1.png"/></a>
 <a href="https://medium.com/tech-iiitg"><img src="https://img.icons8.com/ios-glyphs/50/000000/medium-monogram.png"/></a>
 
 </div>
