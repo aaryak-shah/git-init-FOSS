@@ -8,7 +8,7 @@
     let components = l.split('/')
     return components[components.length - 1]
   }
-  r.rollNumber=r.rollNumber.toUpperCase();
+  r.rollNumber = r.rollNumber.toUpperCase();
 </script>
 
 <div class="tile" class:top={r.rank === 1}>
