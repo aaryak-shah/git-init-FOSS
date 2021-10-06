@@ -133,7 +133,7 @@ export let projects = [
     title: "Codeforces Contest",
     repo: "https://github.com/TheNinza/codeforces-contest",
     stack: ["JavaScript", "Node.js"],
-    desc: "A CLI tool which provides you with sample inputs and outputs for a codechef contest",
+    desc: "A CLI tool which provides you with sample inputs and outputs for a codechef contest.",
     pre: "",
     maintainers: ["TheNinza"],
   },
