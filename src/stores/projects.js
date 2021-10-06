@@ -98,12 +98,12 @@ export let projects = [
     maintainers: ["aaryak-shah", "hs2361", "kunaljain0212"],
   },
   {
-    title: "git-init-FOSS-API",
+    title: "git-init-FOSS API",
     repo: "https://github.com/kunaljain0212/git-init-FOSS-API",
     stack: ["JavaScript", "Node.js", "Express.js"],
     desc: "The backend for the git-init-FOSS event. It is a simple backend which runs a cron job for fetching and updating scores of students every 1 hour and returns that data to a single endpoint.",
     pre: "",
-    maintainers: ["kunaljain0212", "aaryak-shah", "hs2361"],
+    maintainers: ["hs2361", "kunaljain0212"],
   },
   {
     title: "CodeBox",
