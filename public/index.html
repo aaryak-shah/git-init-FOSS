@@ -9,10 +9,19 @@
 	<link rel='icon' type='image/jpg' href='/favicon.jpg'>
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
-
+   <link rel='manifest' href='/manifest.json'>
 	<script defer src='/build/bundle.js'></script>
 </head>
 
 <body>
+	<script>
+		 if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
+	</script>
 </body>
 </html>
