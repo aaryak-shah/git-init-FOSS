@@ -139,7 +139,11 @@ export const rankify = () => {
       p.name = titleCase(p.name);
     });
     lb.sort((a, b) => (b.name > a.name ? -1 : 1));
+    lb.sort((a,b) => b.easy - a.easy);
+    lb.sort((a,b) => b.medium - a.medium);
+    lb.sort((a,b) => b.hard - a.hard);
     lb.sort((a, b) => b.score - a.score);
+
     lb.forEach((p, i) => {
       p.rank = i + 1;
     });
