@@ -1,6 +1,6 @@
 {
-  "name":"svelte-app",
-  "short_name":"svelte",
+  "name":"git init FOSS",
+  "short_name":"git init FOSS",
   "start_url":"/",
   "icons":[
     {
@@ -10,7 +10,7 @@
       "purpose": "any maskable"
     }
   ],
-  "display":"standalone",
-  "background_color":"#3E4EB8",
-  "theme_color":"#2F3BA2"
+  "display":"fullscreen",
+  "background_color":"#000",
+  "theme_color":"#000"
 }
