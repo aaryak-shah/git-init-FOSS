@@ -46,20 +46,35 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    border-top: 1px solid black;
+    padding: 2px;
   }
 
+  :global(body.dark-mode) main{
+    border-top: 0.5px solid rgba(255, 255, 255, 0.746);
+
+  }
+  
+  /* .date{
+    color: chartreuse;
+  } */
   .socials {
     display: flex;
     gap: 1rem;
   }
+  :global(body.dark-mode) .icon{
+		color: white;
+	}
 
   .icon{
     height: 40px;
     width: 40px;
-    color: white;
+    color: rgb(0, 0, 0);
     transition: color 0.7s ease-out, transform 0.7s ease-in-out;
   }
-
+  :global(body.dark-mode) .icon:hover{
+    color: #00ff00;
+	}
   .icon:hover {
     cursor: pointer;
     color: #00ff00;

@@ -34,6 +34,9 @@
       <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
         Leaderboard
       </div>
+      <!-- <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+        Toggle
+      </div> -->
     </div>
     <div class="right">
       <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
@@ -54,11 +57,20 @@
     <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
       Leaderboard
     </div>
+    <!-- <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+      Button
+    </div> -->
   </div>
 </div>
 
 <style>
-  *{color:white;}
+  *{color:rgb(0, 0, 0);}
+  :global(body.dark-mode) *{
+    color: white;
+  }
+  :global(body.dark-mode) .nav-box{
+    background-color: black;
+  }
   .nav-box {
     position: fixed;
     top: 0;
@@ -66,7 +78,7 @@
     right: 0;
     z-index: 100;
     border-bottom: 1px solid gray;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color:  #f2eee2;
   }
 
   .navbar {
@@ -93,13 +105,18 @@
   .tab{
     transition: all 0.2s ease-out;
   }
-
-  .tab:hover {
-    cursor: pointer;
+  :global(body.dark-mode) .tab:hover{
     background-color:white;
     color: rgba(0, 0, 0, 0.95);
-    padding: 6px 8px;
     border: 2px solid white;
+    border-radius: 3px;
+  }
+  .tab:hover {
+    cursor: pointer;
+    background-color:rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.95);
+    padding: 6px 8px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 3px;
   }
 
@@ -111,15 +128,19 @@
   .right {
     text-align: right;
   }
-
+  :global(body.dark-mode) .current{
+    border: 2px solid white;
+  }
   .current {
     padding: 6px 8px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 3px;
   }
-
-  .green {
+  :global(body.dark-mode) .green{
     color: #00ff00;
+  }
+  .green {
+    color: rgb(5, 153, 5);
   }
 
   h1 {
@@ -130,18 +151,23 @@
   .right a {
     display: none;
   }
-
+  :global(body.dark-mode) a{
+    border: 2px solid white;
+  }
   a{
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 9px 18px;
     border-radius: 4px;
     transition: all 0.5s ease-in;
   }
-
-  a:hover{
-    background-color: white;
+  :global(body.dark-mode) a:hover{
     color: rgba(0, 0, 0, 0.95);
+    background-color: white;
+  }
+  a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: bold;
   }
 

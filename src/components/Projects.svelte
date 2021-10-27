@@ -55,9 +55,11 @@
     align-items: center;
     margin-bottom: 30px;
   }
-
-  .icon {
+  :global(body.dark-mode) .icon{
     color: white;
+  }
+  .icon {
+    color: black;
     height: 30px;
     width: 30px;
   }
