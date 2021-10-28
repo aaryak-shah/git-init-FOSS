@@ -1,26 +1,29 @@
 <script>
-  import Navbar from './components/Navbar.svelte'
-  import Projects from './components/Projects.svelte'
-  import Leaderboard from './components/Leaderboard.svelte'
-  import Footer from './components/Footer.svelte'
-  import { getAvatars } from './getAvatars'
-  import { onMount } from 'svelte'
+  import Navbar from "./components/Navbar.svelte";
+  import Projects from "./components/Projects.svelte";
+  import Leaderboard from "./components/Leaderboard.svelte";
+  import Footer from "./components/Footer.svelte";
+  import { getAvatars } from "./getAvatars";
+  import { onMount } from "svelte";
+  import Statistics from "./components/Statistics.svelte";
 
-  let tab = 0
+  let tab = 0;
 
   onMount(() => {
     if (false) {
-      getAvatars()
+      getAvatars();
     }
-  })
+  });
 </script>
 
 <main>
   <Navbar bind:tab />
   {#if tab === 0}
     <Projects />
-  {:else}
+  {:else if tab === 1}
     <Leaderboard />
+  {:else}
+    <Statistics />
   {/if}
   <Footer />
 </main>

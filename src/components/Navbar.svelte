@@ -1,27 +1,27 @@
 <script>
-  import { onMount } from 'svelte'
-  import { FaChevronUp } from 'svelte-icons/fa'
-  import Menu from 'svelte-icons/fa/FaBars.svelte'
-  import Close from 'svelte-icons/fa/FaChevronUp.svelte'
+  import { onMount } from "svelte";
+  import { FaChevronUp } from "svelte-icons/fa";
+  import Menu from "svelte-icons/fa/FaBars.svelte";
+  import Close from "svelte-icons/fa/FaChevronUp.svelte";
 
-  export let tab = 0
-  let openMenu = false
+  export let tab = 0;
+  let openMenu = false;
 
   const setTab = (i) => {
-    tab = i
-    openMenu = false
-  }
-  const toggleMenu = () => (openMenu = !openMenu)
+    tab = i;
+    openMenu = false;
+  };
+  const toggleMenu = () => (openMenu = !openMenu);
 
   onMount(() => {
-    document.querySelector('.nav-box').addEventListener('click', (e) => {
-      e.stopPropagation()
-    })
+    document.querySelector(".nav-box").addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
 
-    window.addEventListener('click', (e) => {
-      openMenu = false
-    })
-  })
+    window.addEventListener("click", (e) => {
+      openMenu = false;
+    });
+  });
 </script>
 
 <div class="nav-box">
@@ -33,6 +33,9 @@
       </div>
       <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
         Leaderboard
+      </div>
+      <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+        Statistics
       </div>
     </div>
     <div class="right">
@@ -54,11 +57,16 @@
     <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
       Leaderboard
     </div>
+    <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+      Statistics
+    </div>
   </div>
 </div>
 
 <style>
-  *{color:white;}
+  * {
+    color: white;
+  }
   .nav-box {
     position: fixed;
     top: 0;
@@ -78,9 +86,8 @@
 
   .mob-tabs {
     display: flex;
-    gap: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 10px;
   }
 
@@ -90,13 +97,13 @@
     align-items: center;
   }
 
-  .tab{
+  .tab {
     transition: all 0.2s ease-out;
   }
 
   .tab:hover {
     cursor: pointer;
-    background-color:white;
+    background-color: white;
     color: rgba(0, 0, 0, 0.95);
     padding: 6px 8px;
     border: 2px solid white;
@@ -131,7 +138,7 @@
     display: none;
   }
 
-  a{
+  a {
     text-decoration: none;
     border: 2px solid white;
     padding: 9px 18px;
@@ -139,7 +146,7 @@
     transition: all 0.5s ease-in;
   }
 
-  a:hover{
+  a:hover {
     background-color: white;
     color: rgba(0, 0, 0, 0.95);
     font-weight: bold;
