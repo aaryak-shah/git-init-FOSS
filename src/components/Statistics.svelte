@@ -1,6 +1,6 @@
-<script>
+<script defer>
   let stats = [0];
-  let error = null;
+  let Showstats = null;
 
   import { onMount } from "svelte";
   onMount(() => {
@@ -9,10 +9,11 @@
         response
           .json()
           .then((data) => {
+            Showstats = true;
             stats = data;
-            console.log(data.TotalPR);
           })
           .catch((er) => {
+            Showstats = false;
             error = er;
           });
       }
@@ -64,7 +65,7 @@
   onMount(createchart);
 </script>
 
-{#if error == null}
+{#if Showstats}
   <main>
     <div class="Statistics">
       <div class="stats">
@@ -110,6 +111,7 @@
 {:else}
   <h2>loading stats ........</h2>
 {/if}
+
 <div class="flexbox">
   <div class="Chartbox"><canvas id="myChart" width="3" height="1" /></div>
 </div>
@@ -124,13 +126,17 @@
   .flexbox {
     display: flex;
     margin-bottom: 3rem;
-    margin-top: 3rem;
+    margin-top: 6rem;
     justify-content: center;
     align-items: center;
     min-height: 200px;
   }
+  h2 {
+    text-align: center;
+  }
   main {
     margin-top: 100px;
+    margin-bottom: 100px;
   }
   .Statistics {
     align-items: center;
