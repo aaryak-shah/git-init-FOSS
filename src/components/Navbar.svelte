@@ -4,6 +4,9 @@
   import Menu from 'svelte-icons/fa/FaBars.svelte'
   import Close from 'svelte-icons/fa/FaChevronUp.svelte'
 
+  function toggle() {
+    window.document.body.classList.toggle('dark-mode')
+  }
   export let tab = 0
   let openMenu = false
 
@@ -34,9 +37,12 @@
       <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
         Leaderboard
       </div>
-      <!-- <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+      <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+        Statistics
+      </div>
+      <div class="tab" class:current={tab === 3} on:click={toggle}>
         Toggle
-      </div> -->
+      </div>
     </div>
     <div class="right">
       <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
@@ -57,9 +63,12 @@
     <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
       Leaderboard
     </div>
-    <!-- <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
-      Button
-    </div> -->
+    <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+      Statistics
+    </div>
+    <div class="tab" class:current={tab === 3} on:click={toggle}>
+      Toggle
+    </div>
   </div>
 </div>
 
@@ -92,7 +101,7 @@
     display: flex;
     gap: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 10px;
   }
 
@@ -143,10 +152,10 @@
     color: rgb(5, 153, 5);
   }
 
-  h1 {
+  /* h1 {
     margin: 0;
     cursor: pointer;
-  }
+  } */
 
   .right a {
     display: none;
@@ -196,9 +205,9 @@
     .right a {
       display: inline;
     }
-    .right h1 {
+    /* .right h1 {
       display: none;
-    }
+    } */
     .icon {
       display: none;
     }

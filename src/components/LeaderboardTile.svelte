@@ -1,7 +1,7 @@
 <script>
   import Github from 'svelte-icons/fa/FaGithub.svelte'
   
-  export let i = 0
+  // export let i = 0
   export let r
 
   const l2p = (l) => {

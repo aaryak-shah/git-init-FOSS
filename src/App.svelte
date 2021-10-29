@@ -5,7 +5,8 @@
   import Footer from './components/Footer.svelte'
   import { getAvatars } from './getAvatars'
   import { onMount } from 'svelte'
-  import Button from './components/Toggle.svelte'
+  import Statistics from "./components/Statistics.svelte";
+
 
 
   let tab = 0
@@ -16,13 +17,6 @@
     }
   })
 </script>
-<br><br><br><br>
-<div class="button">
-  <Button>
-    Toggle
-  </Button>
-</div>
-
 
 <main>
   <Navbar bind:tab />
@@ -30,8 +24,8 @@
     <Projects />
   {:else if tab === 1}
     <Leaderboard />
-  {:else}
-    <Button />
+  {:else }
+    <Statistics />
   {/if}
   <Footer />
 </main>

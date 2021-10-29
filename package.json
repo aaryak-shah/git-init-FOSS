@@ -18,7 +18,9 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@mdi/js": "^6.4.95",
     "sirv-cli": "^1.0.0",
+    "svelte-chartjs": "^1.1.1",
     "svelte-icons": "^2.1.0"
   }
 }

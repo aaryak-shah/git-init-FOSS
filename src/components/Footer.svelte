@@ -45,7 +45,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
     border-top: 1px solid black;
     padding: 2px;
   }
@@ -77,7 +76,7 @@
 	}
   .icon:hover {
     cursor: pointer;
-    color: #00ff00;
+    color: rgb(5, 153, 5);
     transform: rotate(360deg) scale(1.5);
   }
 </style>
