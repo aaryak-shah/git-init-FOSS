@@ -80,8 +80,11 @@
   .stats {
     padding: 1rem 1rem;
   }
-  .result {
+  :global(body.dark-theme){
     color: #00ff00;
+  }
+  .result {
+    color: rgb(5, 153, 5);
   }
   .divider {
     height: 1px;

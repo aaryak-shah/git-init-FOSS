@@ -98,11 +98,13 @@
     align-items: center;
     margin-bottom: 30px;
   }
-
+  :global(body.dark-mode) .icon{
+    color: white;
+  }
   .icon {
     height: 30px;
     width: 30px;
-    color: white;
+    color: black;
   }
 
   @media only screen and (min-width: 768px) {
