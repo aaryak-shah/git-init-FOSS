@@ -41,11 +41,11 @@
             label: "Statistics",
             data,
             backgroundColor: [
-              "rgba(255, 255, 255,1)",
-              "rgba(255, 255, 255,1)",
-              "rgba(255, 255, 255,1)",
-              "rgba(255, 255, 255,1)",
-              "rgba(255, 255, 255,1)",
+              "rgba(0, 255, 0,1)",
+              "rgba(0, 255, 0,1)",
+              "rgba(0, 255, 0,1)",
+              "rgba(0, 255, 0,1)",
+              "rgba(0, 255, 0,1)",
             ],
             borderWidth: 2,
             barThickness: 50,
@@ -135,6 +135,7 @@
   h2 {
     text-align: center;
   }
+
   main {
     margin-top: 100px;
     margin-bottom: 100px;
