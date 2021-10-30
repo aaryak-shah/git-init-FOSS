@@ -13,11 +13,12 @@
   let tab = 0
   let data = [];
 
-
+ 
   onMount(() => {
     if (false) {
       getAvatars()
     }
+    window.document.body.classList.toggle('dark-mode')
   })
   onMount(() => {
     const URL = "https://gitinitapi.jainkunal.me/leaderboardstats";

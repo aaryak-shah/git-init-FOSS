@@ -11,8 +11,8 @@
     <Toggle
     label=""
     switchColor="rgba(197, 197, 197, 0.89)"
-    toggledColor="white"
-    untoggledColor="black"
+    toggledColor="black"
+    untoggledColor="white"
     bind:toggled />
   </div>
 </main>

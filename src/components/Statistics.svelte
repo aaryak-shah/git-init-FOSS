@@ -148,7 +148,7 @@
   .stats {
     padding: 1rem 1rem;
   }
-  :global(body.dark-theme) {
+  :global(body.dark-mode) .result{
     color: #00ff00;
   }
   .result {
