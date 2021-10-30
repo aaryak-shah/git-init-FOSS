@@ -70,7 +70,7 @@
     <div class="Statistics">
       <div class="stats">
         <h3>
-          Total Number of Pull request :<span class="result"
+          Total Number of Pull Requests:<span class="result"
             >{stats.TotalPR}</span
           >
           <br />
@@ -87,22 +87,23 @@
       <div class="divider" />
       <div class="stats">
         <h3>
-          Number Of Hard issue:<span class="result">{stats.NumberHard}</span><br
-          />
-        </h3>
-      </div>
-      <div class="divider" />
-      <div class="stats">
-        <h3>
-          Number Of Medium issue:<span class="result">{stats.NumberMedium}</span
+          Number Of Hard Issues:<span class="result">{stats.NumberHard}</span
           ><br />
         </h3>
       </div>
       <div class="divider" />
       <div class="stats">
         <h3>
-          Number Of Easy issue:<span class="result">{stats.NumberEasy}</span><br
-          />
+          Number Of Medium Issues:<span class="result"
+            >{stats.NumberMedium}</span
+          ><br />
+        </h3>
+      </div>
+      <div class="divider" />
+      <div class="stats">
+        <h3>
+          Number Of Easy Issues:<span class="result">{stats.NumberEasy}</span
+          ><br />
         </h3>
       </div>
       <div class="divider" />
@@ -146,8 +147,11 @@
   .stats {
     padding: 1rem 1rem;
   }
-  .result {
+  :global(body.dark-theme) {
     color: #00ff00;
+  }
+  .result {
+    color: rgb(5, 153, 5);
   }
   .divider {
     height: 1px;

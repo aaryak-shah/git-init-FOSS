@@ -49,4 +49,14 @@
 </main>
 
 <style>
+  :global(body) {
+    background-color: #f2eee2;
+    color: black;
+    transition: background-color 0.3s;
+  }
+
+  :global(body.dark-mode) {
+    background-color: rgb(0, 1, 2);
+    color: #bfc2c7;
+  }
 </style>

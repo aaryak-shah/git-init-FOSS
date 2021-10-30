@@ -155,8 +155,8 @@ export const searchQueryStore = writable("");
 export const pstringify = () => {
   leaderboard.subscribe((lb) => {
     lb.forEach((p) => {
-      p.str = p.name + " " + p.profile + " ";
-    });
+      p.str = p.name + " " + p.profile + " " + p.score + " " + p.rollNumber + " ";
+    }); 
   });
 };
 export const search = () => {
