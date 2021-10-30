@@ -2,6 +2,7 @@
   import Search from 'svelte-icons/fa/FaSearch.svelte'
   import ProjectCard from './ProjectCard.svelte'
   import { pstringify, searchQueryStore, search } from '../stores/projects'
+  // import Toggle from "svelte-toggle";
 
   let query = ''
   let results = []
@@ -12,13 +13,28 @@
 
   pstringify()
   searchQueryStore.subscribe((data) => (results = search()))
+  
+  // let toggled = false;
+  // function toggle() {
+  //   window.document.body.classList.toggle('dark-mode')
+  // }
+
 </script>
 
 <main>
+  <!-- <div class="right" on:click={toggle}>
+    <Toggle
+    label=""
+    switchColor="rgba(197, 197, 197, 0.89)"
+    toggledColor="white"
+    untoggledColor="black"
+    bind:toggled />
+  </div> -->
   <div class="search">
     <div class="icon"><Search /></div>
     <input type="text" placeholder="Search..." bind:value={query} />
   </div>
+  
   <div class="projects">
     {#each results as p}
       <ProjectCard {p} />
@@ -37,6 +53,8 @@
   }
   :global(body.dark-mode) ::placeholder{
     color: rgba(156, 156, 156, 0.89);
+    color: rgba(197, 197, 197, 0.89);
+
   }  
   ::placeholder{
     color: rgb(78, 78, 78);
@@ -69,6 +87,7 @@
     margin-bottom: 30px;
     color: rgb(39, 39, 39);
   }
+   
   :global(body.dark-mode) .icon{
     color: white;
   }

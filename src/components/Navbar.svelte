@@ -3,10 +3,12 @@
   import { FaChevronUp } from 'svelte-icons/fa'
   import Menu from 'svelte-icons/fa/FaBars.svelte'
   import Close from 'svelte-icons/fa/FaChevronUp.svelte'
+  // import ToggleOn from 'svelte-icons/fa/FaToggleOn.svelte'
+  // import ToggleOf from 'svelte-icons/fa/FaToggleOf.svelte'
 
-  function toggle() {
-    window.document.body.classList.toggle('dark-mode')
-  }
+  // function toggle() {
+  //   window.document.body.classList.toggle('dark-mode')
+  // }
   export let tab = 0
   let openMenu = false
 
@@ -40,9 +42,9 @@
       <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
         Statistics
       </div>
-      <div class="tab" class:current={tab === 3} on:click={toggle}>
+      <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
         Toggle
-      </div>
+      </div> -->
     </div>
     <div class="right">
       <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
@@ -66,9 +68,9 @@
     <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
       Statistics
     </div>
-    <div class="tab" class:current={tab === 3} on:click={toggle}>
+    <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
       Toggle
-    </div>
+    </div> -->
   </div>
 </div>
 
