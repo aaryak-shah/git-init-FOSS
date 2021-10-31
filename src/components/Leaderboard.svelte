@@ -78,31 +78,51 @@
     background: linear-gradient(to right, transparent, gray, transparent);
   }
 
+  :global(body.dark-mode) ::placeholder{
+    color: rgba(156, 156, 156, 0.89);
+    color: rgba(197, 197, 197, 0.89);
+
+  }  
+  ::placeholder{
+    color: rgb(78, 78, 78);
+  }
+
+  :global(body.dark-mode) input{
+    color: white;
+  }
   input {
     background-color: transparent;
-    color: white;
+    color: rgb(39, 39, 39);
     font-size: large;
     border: none;
     outline: none;
     /* border-bottom: 2px solid gray; */
     padding: 10px 5px;
+    width: 200px;
   }
-
-  input:focus {
+  :global(body.dark-mode) input:focus {
     border-bottom: 3px solid white;
   }
 
+  input:focus {
+    border-bottom: 3px solid rgb(39, 39, 39);
+  }
+  
   .search {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 30px;
+    color: rgb(39, 39, 39);
   }
-
+   
+  :global(body.dark-mode) .icon{
+    color: white;
+  }
   .icon {
+    color: black;
     height: 30px;
     width: 30px;
-    color: white;
   }
 
   @media only screen and (min-width: 768px) {

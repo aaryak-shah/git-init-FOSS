@@ -14,7 +14,7 @@
     </div>
     <div class="repo">
       <div class="icon"><Github /></div>
-      <a rel="noopener" href={p.repo} target="_blank"> {l2r(p.repo)}</a>
+      <a rel="noopener" href={p.repo} target="_blank" class="repo-link"> {l2r(p.repo)}</a>
     </div>
     <div class="stack">
       {#each p.stack as s}
@@ -24,10 +24,13 @@
     <p class="desc">
       {p.desc}
     </p>
-    {#if p.pre}
-      <b>Prerequisites: </b>
+    <div class="prereqs">
+      {#if p.pre}
+      <b class="pre">Prerequisites: </b>
       {p.pre}
-    {/if}
+      {/if}
+    </div>
+    
   </div>
   <div class="mentor">
     <div class="avatar">
@@ -55,10 +58,33 @@
 
 <style>
   *{
+    color: black;
+  }
+  :global(body.dark-mode) .desc{
+		background-color: null;
+		color: #bfc2c7;
+	}
+  :global(body.dark-mode) .uname{
+		color: white;
+	}
+  :global(body.dark-mode) .comma{
+		color: white;
+	}
+  :global(body.dark-mode) .repo-link{
+		color: white;
+	}
+  :global(body.dark-mode) .prereqs{
+		color: white;
+	}
+  :global(body.dark-mode) .pre{
+		color: white;
+	}
+  :global(body.dark-mode) .icon{
     color: white;
   }
+  
   .card {
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 20px;
     /* width: 300px; */
@@ -67,29 +93,44 @@
     flex-direction: column;
     justify-content: space-between;
   }
-
-  .card:hover {
+  :global(body.dark-mode) .card:hover {
     border: 1px solid #00ff00;
   }
-
+  :global(body.dark-mode) .card{
+    border: 1px solid white;
+	}
+  .card:hover {
+    border: 1px solid rgb(5, 153, 5);
+  }
+  :global(body.dark-mode) h3{
+    color: #00ff00;
+  }
+  :global(body.dark-mode) h2{
+    color: #00ff00;
+  }
+  
   h2,
   h3 {
     margin: 0;
-    color: #00ff00;
+    color: rgb(5, 153, 5);
   }
-
   .stack {
     margin: 10px 0;
   }
-
+  :global(body.dark-mode) .chip{
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 31, 32);
+  }
   .chip {
     display: inline-block;
     font-size: small;
-    background-color: #181818;
     margin: 2px;
     padding: 5px 10px;
     border-radius: 100px;
     width: max-content;
+    border: 1px solid black;
+    color: rgb(22, 22, 22);
+    background-color: rgb(255, 255, 255);
   }
 
   .desc {
@@ -145,7 +186,7 @@
   }
 
   .icon {
-    color: white;
+    color: rgb(0, 0, 0);
     height: 20px;
     width: 20px;
     display: inline-block;

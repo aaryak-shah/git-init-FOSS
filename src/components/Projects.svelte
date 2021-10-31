@@ -2,6 +2,7 @@
   import Search from 'svelte-icons/fa/FaSearch.svelte'
   import ProjectCard from './ProjectCard.svelte'
   import { pstringify, searchQueryStore, search } from '../stores/projects'
+  // import Toggle from "svelte-toggle";
 
   let query = ''
   let results = []
@@ -12,13 +13,28 @@
 
   pstringify()
   searchQueryStore.subscribe((data) => (results = search()))
+  
+  // let toggled = false;
+  // function toggle() {
+  //   window.document.body.classList.toggle('dark-mode')
+  // }
+
 </script>
 
 <main>
+  <!-- <div class="right" on:click={toggle}>
+    <Toggle
+    label=""
+    switchColor="rgba(197, 197, 197, 0.89)"
+    toggledColor="white"
+    untoggledColor="black"
+    bind:toggled />
+  </div> -->
   <div class="search">
     <div class="icon"><Search /></div>
     <input type="text" placeholder="Search..." bind:value={query} />
   </div>
+  
   <div class="projects">
     {#each results as p}
       <ProjectCard {p} />
@@ -35,29 +51,49 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1rem;
   }
+  :global(body.dark-mode) ::placeholder{
+    color: rgba(156, 156, 156, 0.89);
+    color: rgba(197, 197, 197, 0.89);
 
+  }  
+  ::placeholder{
+    color: rgb(78, 78, 78);
+  }
+
+  :global(body.dark-mode) input{
+    color: white;
+  }
   input {
     background-color: transparent;
-    color: white;
+    color: rgb(39, 39, 39);
     font-size: large;
     border: none;
     outline: none;
     /* border-bottom: 2px solid gray; */
     padding: 10px 5px;
+    width: 200px;
   }
-  input:focus {
+  :global(body.dark-mode) input:focus {
     border-bottom: 3px solid white;
   }
 
+  input:focus {
+    border-bottom: 3px solid rgb(39, 39, 39);
+  }
+  
   .search {
     display: flex;
     gap: 10px;
     align-items: center;
     margin-bottom: 30px;
+    color: rgb(39, 39, 39);
   }
-
-  .icon {
+   
+  :global(body.dark-mode) .icon{
     color: white;
+  }
+  .icon {
+    color: black;
     height: 30px;
     width: 30px;
   }

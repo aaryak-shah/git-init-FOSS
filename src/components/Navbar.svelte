@@ -3,7 +3,12 @@
   import { FaChevronUp } from 'svelte-icons/fa'
   import Menu from 'svelte-icons/fa/FaBars.svelte'
   import Close from 'svelte-icons/fa/FaChevronUp.svelte'
+  // import ToggleOn from 'svelte-icons/fa/FaToggleOn.svelte'
+  // import ToggleOf from 'svelte-icons/fa/FaToggleOf.svelte'
 
+  // function toggle() {
+  //   window.document.body.classList.toggle('dark-mode')
+  // }
   export let tab = 0
   let openMenu = false
 
@@ -34,6 +39,12 @@
       <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
         Leaderboard
       </div>
+      <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+        Statistics
+      </div>
+      <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
+        Toggle
+      </div> -->
     </div>
     <div class="right">
       <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
@@ -48,17 +59,29 @@
     </div>
   </div>
   <div class="mob-tabs" class:hide={!openMenu}>
-    <div class="tab" class:current={tab === 0} on:click={() => setTab(0)}>
+    <div class="tab" class:mob-current={tab === 0} on:click={() => setTab(0)}>
       Projects
     </div>
-    <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
+    <div class="tab" class:mob-current={tab === 1} on:click={() => setTab(1)}>
       Leaderboard
     </div>
+    <div class="tab" class:mob-current={tab === 2} on:click={() => setTab(2)}>
+      Statistics
+    </div>
+    <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
+      Toggle
+    </div> -->
   </div>
 </div>
 
 <style>
-  *{color:white;}
+  *{color:rgb(0, 0, 0);}
+  :global(body.dark-mode) *{
+    color: white;
+  }
+  :global(body.dark-mode) .nav-box{
+    background-color: black;
+  }
   .nav-box {
     position: fixed;
     top: 0;
@@ -66,7 +89,7 @@
     right: 0;
     z-index: 100;
     border-bottom: 1px solid gray;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color:  #f2eee2;
   }
 
   .navbar {
@@ -78,9 +101,8 @@
 
   .mob-tabs {
     display: flex;
-    gap: 3rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 10px;
   }
 
@@ -93,13 +115,18 @@
   .tab{
     transition: all 0.2s ease-out;
   }
-
-  .tab:hover {
-    cursor: pointer;
+  :global(body.dark-mode) .tab:hover{
     background-color:white;
     color: rgba(0, 0, 0, 0.95);
-    padding: 6px 8px;
     border: 2px solid white;
+    border-radius: 3px;
+  }
+  .tab:hover {
+    cursor: pointer;
+    background-color:rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.95);
+    padding: 6px 8px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 3px;
   }
 
@@ -111,44 +138,63 @@
   .right {
     text-align: right;
   }
-
-  .current {
-    padding: 6px 8px;
-    border: 2px solid white;
-    border-radius: 3px;
-  }
-
-  .green {
+  :global(body.dark-mode) .mob-current{
     color: #00ff00;
   }
+  .mob-current{
+    color: rgb(5, 153, 5);
+    font-weight: bolder;
+  }
+  :global(body.dark-mode) .current{
+    border: 2px solid white;
+  }
+  .current {
+    padding: 5px 7px;
+    border: 2px solid black;
+    border-radius: 3px;
+  }
+  :global(body.dark-mode) .green{
+    color: #00ff00;
+  }
+  .green {
+    color: rgb(5, 153, 5);
+  }
 
-  h1 {
+  /* h1 {
     margin: 0;
     cursor: pointer;
-  }
+  } */
 
   .right a {
     display: none;
   }
-
+  :global(body.dark-mode) a{
+    border: 2px solid white;
+  }
   a{
     text-decoration: none;
-    border: 2px solid white;
+    border: 2px solid black;
     padding: 9px 18px;
     border-radius: 4px;
     transition: all 0.5s ease-in;
   }
-
-  a:hover{
-    background-color: white;
+  :global(body.dark-mode) a:hover{
     color: rgba(0, 0, 0, 0.95);
+    background-color: white;
+  }
+  a:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: bold;
+  }
+  :global(body.dark-mode) .icon{
+    color: #00ff00;
   }
 
   .icon {
     height: 20px;
     width: 20px;
-    color: #00ff00;
+    color: rgb(5, 153, 5);
     cursor: pointer;
   }
   @media only screen and (min-width: 768px) {
@@ -170,9 +216,9 @@
     .right a {
       display: inline;
     }
-    .right h1 {
+    /* .right h1 {
       display: none;
-    }
+    } */
     .icon {
       display: none;
     }

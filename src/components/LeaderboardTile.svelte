@@ -1,7 +1,7 @@
 <script>
   import Github from 'svelte-icons/fa/FaGithub.svelte'
   
-  export let i = 0
+  // export let i = 0
   export let r
 
   const l2p = (l) => {
@@ -70,12 +70,21 @@
   a {
     font-size: small;
     display: inline-block;
-    color: white;
+    color: rgb(41, 36, 36);
   }
 
+  :global(body.dark-mode) .top h2{
+    color: #00ff00;
+  }
+  :global(body.dark-mode) .top h3{
+    color: #00ff00;
+  }
+  :global(body.dark-mode) a{
+    color: white;
+  }
   .top h2,
   .top h3 {
-    color: #00ff00;
+    color: rgb(5, 153, 5);
   }
 
   .muted {
