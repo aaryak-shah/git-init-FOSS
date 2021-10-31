@@ -6,9 +6,9 @@
 
 </div>
 
-![Screenshot](https://user-images.githubusercontent.com/84467090/139578095-b37c5507-02a9-4413-8b94-5faaf4160fad.jpeg)
-![Screenshot](https://user-images.githubusercontent.com/84467090/139584281-2915c55c-6862-4cdc-a484-1627019b003e.jpeg)
-<img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/139578153-7d7ecc80-2975-4d68-b9b5-1584735dd417.jpeg><img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/139578184-915d63d6-9f13-45e1-8e84-fa2aff3df23e.jpeg>
+![Screenshot](https://user-images.githubusercontent.com/84467090/139588678-a1f719b8-e2fe-4e9c-871e-12285f0454a1.jpeg)
+![Screenshot](https://user-images.githubusercontent.com/84467090/139588657-b860531b-f57a-490f-ba33-5ba175803ca6.jpeg)
+<img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/139588772-832fdae3-ff5b-486b-9771-458a89c21758.jpeg><img width=50% height=90% src=https://user-images.githubusercontent.com/84467090/139588612-1f8c8855-cae9-4488-a92a-304770259fd5.jpeg>
 
 <div align ="center">
 
