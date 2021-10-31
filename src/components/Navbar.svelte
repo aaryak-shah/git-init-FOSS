@@ -3,10 +3,12 @@
   import { FaChevronUp } from 'svelte-icons/fa'
   import Menu from 'svelte-icons/fa/FaBars.svelte'
   import Close from 'svelte-icons/fa/FaChevronUp.svelte'
+  // import ToggleOn from 'svelte-icons/fa/FaToggleOn.svelte'
+  // import ToggleOf from 'svelte-icons/fa/FaToggleOf.svelte'
 
-  function toggle() {
-    window.document.body.classList.toggle('dark-mode')
-  }
+  // function toggle() {
+  //   window.document.body.classList.toggle('dark-mode')
+  // }
   export let tab = 0
   let openMenu = false
 
@@ -40,9 +42,9 @@
       <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
         Statistics
       </div>
-      <div class="tab" class:current={tab === 3} on:click={toggle}>
+      <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
         Toggle
-      </div>
+      </div> -->
     </div>
     <div class="right">
       <a rel="noopener" href="https://github.com/AASF-IIITM">GitHub</a>
@@ -57,18 +59,18 @@
     </div>
   </div>
   <div class="mob-tabs" class:hide={!openMenu}>
-    <div class="tab" class:current={tab === 0} on:click={() => setTab(0)}>
+    <div class="tab" class:mob-current={tab === 0} on:click={() => setTab(0)}>
       Projects
     </div>
-    <div class="tab" class:current={tab === 1} on:click={() => setTab(1)}>
+    <div class="tab" class:mob-current={tab === 1} on:click={() => setTab(1)}>
       Leaderboard
     </div>
-    <div class="tab" class:current={tab === 2} on:click={() => setTab(2)}>
+    <div class="tab" class:mob-current={tab === 2} on:click={() => setTab(2)}>
       Statistics
     </div>
-    <div class="tab" class:current={tab === 3} on:click={toggle}>
+    <!-- <div class="tab" class:current={tab === 3} on:click={toggle}>
       Toggle
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -99,7 +101,6 @@
 
   .mob-tabs {
     display: flex;
-    gap: 3rem;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 10px;
@@ -137,11 +138,18 @@
   .right {
     text-align: right;
   }
+  :global(body.dark-mode) .mob-current{
+    color: #00ff00;
+  }
+  .mob-current{
+    color: rgb(5, 153, 5);
+    font-weight: bolder;
+  }
   :global(body.dark-mode) .current{
     border: 2px solid white;
   }
   .current {
-    padding: 6px 8px;
+    padding: 5px 7px;
     border: 2px solid black;
     border-radius: 3px;
   }
@@ -179,11 +187,14 @@
     color: rgba(255, 255, 255, 0.95);
     font-weight: bold;
   }
+  :global(body.dark-mode) .icon{
+    color: #00ff00;
+  }
 
   .icon {
     height: 20px;
     width: 20px;
-    color: #00ff00;
+    color: rgb(5, 153, 5);
     cursor: pointer;
   }
   @media only screen and (min-width: 768px) {
