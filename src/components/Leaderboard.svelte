@@ -98,6 +98,7 @@
     outline: none;
     /* border-bottom: 2px solid gray; */
     padding: 10px 5px;
+    width: 200px;
   }
   :global(body.dark-mode) input:focus {
     border-bottom: 3px solid white;

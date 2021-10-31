@@ -20,9 +20,14 @@
 <style>
   .right {
     float: right ;
-    padding-right: 15%;
-
+    padding-right: 5%;
     /* padding-right: 40rem; */
+  }
+
+  @media only screen and (min-width: 768px) {
+    .right {
+      padding-right: 15%;
+    }
   }
   
 </style>
